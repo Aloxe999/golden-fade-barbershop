@@ -583,6 +583,54 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     <p>© 2026 <span>GOLDEN FADE</span>. All rights reserved.</p>
     <p>Look sharp. Feel golden.</p>
 </footer>
+<!-- Floating WhatsApp Button -->
+<a
+    href="https://wa.me/2349042183056?text=Hello%20Golden%20Fade!%20I%20would%20like%20to%20book%20an%20appointment."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Golden Fade on WhatsApp"
+>
+    <span class="whatsapp-icon">☏</span>
+    <span>BOOK ON WHATSAPP</span>
+</a>
 
+<style>
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: #25D366;
+    color: #071b0d;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+}
+
+.whatsapp-icon {
+    font-size: 23px;
+}
+
+@media (max-width: 480px) {
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 15px;
+    }
+}
+</style>
 </body>
   </html>
