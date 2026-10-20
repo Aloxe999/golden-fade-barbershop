@@ -7,7 +7,63 @@
 <title>GOLDEN FADE | Premium Barbershop</title>
 
 <meta name="description" content="Discover premium haircuts, precision fades, and professional grooming at Golden Fade Barbershop.">
+/* GOLDEN FADE PREMIUM UPGRADE */
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+button, .btn, a {
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input, select, textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border-radius: 8px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(30px, 8vw, 46px);
+  }
+
+  h2 {
+    font-size: clamp(24px, 6vw, 34px);
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  button, .btn {
+    max-width: 100%;
+  }
+}
 <style>
 * {
     margin: 0;
