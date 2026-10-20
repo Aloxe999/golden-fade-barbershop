@@ -438,6 +438,111 @@ footer span {
 <section class="booking" id="booking">
     <div class="label">YOUR NEXT LOOK STARTS HERE</div>
 
+    <h2>Book Your <span>Fresh Fade</span></h2>
+
+    <p>Complete the form below to request your appointment.</p>
+
+    <form id="bookingForm" style="max-width:500px;margin:30px auto;text-align:left;">
+
+        <label for="customerName">Your Name</label>
+        <input id="customerName" type="text" placeholder="Enter your name" required>
+
+        <label for="customerPhone">Your Phone Number</label>
+        <input id="customerPhone" type="tel" placeholder="Enter your phone number" required>
+
+        <label for="service">Choose a Service</label>
+        <select id="service" required>
+            <option value="">Select a service</option>
+            <option>Classic Haircut - $25</option>
+            <option>Premium Fade - $35</option>
+            <option>Beard Grooming - $15</option>
+        </select>
+
+        <label for="date">Appointment Date</label>
+        <input id="date" type="date" required>
+
+        <label for="time">Preferred Time</label>
+        <select id="time" required>
+            <option value="">Choose a time</option>
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>1:00 PM</option>
+            <option>2:00 PM</option>
+            <option>3:00 PM</option>
+            <option>4:00 PM</option>
+            <option>5:00 PM</option>
+            <option>6:00 PM</option>
+        </select>
+
+        <button type="submit" class="button" style="width:100%;margin-top:20px;border:none;cursor:pointer;">
+            REQUEST APPOINTMENT ON WHATSAPP
+        </button>
+
+    </form>
+
+    <a href="https://wa.me/2349042183056"
+       class="button button-outline"
+       target="_blank"
+       rel="noopener noreferrer">
+       CHAT WITH US ON WHATSAPP
+    </a>
+</section>
+
+<style>
+#bookingForm label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #d4af37;
+}
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+    padding: 13px;
+    background: #171717;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    outline: 1px solid #d4af37;
+}
+</style>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    const message =
+        "Hello GOLDEN FADE! I would like to request an appointment.\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Service: " + service + "\n" +
+        "Preferred date: " + date + "\n" +
+        "Preferred time: " + time + "\n\n" +
+        "Please confirm if this appointment is available.";
+
+    const whatsappURL =
+        "https://wa.me/2349042183056?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+    <div class="label">YOUR NEXT LOOK STARTS HERE</div>
+
     <h2>Ready for a <span>Fresh Fade?</span></h2>
 
     <p>
